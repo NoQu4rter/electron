@@ -9,6 +9,7 @@
 #include <vector>
 
 #include "base/memory/weak_ptr.h"
+#include "shell/browser/file_select_helper.h"
 #include "third_party/blink/public/mojom/choosers/file_chooser.mojom.h"
 
 namespace base {
@@ -40,6 +41,8 @@ class WebDialogHelper {
  private:
   NativeWindow* window_;
   bool offscreen_;
+
+  base::WeakPtr<FileSelectHelper> file_select_helper_;
 
   base::WeakPtrFactory<WebDialogHelper> weak_factory_;
 
